@@ -1,0 +1,24 @@
+{
+    "name": "crablab/realtime-trains",
+    "type": "library",
+    "description": "Realtime Trains API wrapper",
+    "keywords": ["trains","realtime","api","rtt","darwin","networkrail"],
+    "homepage": "https://github.com/crablab/realtimetrains_php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hugh Wells",
+            "email": "hugh@crablab.co.uk",
+            "homepage": "https://crablab.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "realtime": "src/"
+        }
+    }
+}

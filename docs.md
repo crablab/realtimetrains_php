@@ -24,7 +24,7 @@ Arguments:
  - `$crs` the CRS code of the station to search 
  - `$type=null` filter by _departures_ or _arrivals_
  - `$to=null` CRS to filter destination by
- - `$from=null` CRS to filter origina by
+ - `$from=null` CRS to filter origin by
  - `$timestamp=null` a specific timestamp to filter services by
  - `$rows=20` maximum rows returned
 
