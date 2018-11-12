@@ -2,7 +2,25 @@
 
 ## Configuration
 
+You need `php-json` and `php-curl` installed. 
+
 ## Setup
+
+Instantiate the class: 
+
+```
+$rtt = realtime\realtime("api_username", "api_password"); 
+```
+
+You can get the relevant tokens [here](https://api.rtt.io/). Note that the credentials above are _not_ your login details to the website above, they are issued from within the developer console. 
+
+## Quickstart
+
+```
+$rtt = realtime\realtime("api_username", "api_password");
+$pboDepartures = $rtt->departuresBoard("PBO", null, null);
+echo("Headcode: " . $pboDepartures->services[0]['serviceUid']['trainIdentity']);
+```
 
 ## Realtime Trains Documenation
 
