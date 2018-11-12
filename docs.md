@@ -19,15 +19,49 @@ These docs are designed to be easy to understand, and are based off the code. If
 
 ### `locationList`
 
+A lower level location endpoint. 
+
 Arguments: 
 
- - `$crs` the CRS code of the station to search 
- - `$type=null` filter by _departures_ or _arrivals_
- - `$to=null` CRS to filter destination by
- - `$from=null` CRS to filter origin by
- - `$timestamp=null` a specific timestamp to filter services by
- - `$rows=20` maximum rows returned
+- `$crs` the CRS code of the station to search 
+- `$type=null` filter by _departures_ or _arrivals_
+- `$to=null` CRS to filter destination by
+- `$from=null` CRS to filter origin by
+- `$timestamp=null` a specific timestamp to filter services by
+- `$rows=5` maximum rows returned
 
- Returns: 
+Returns: 
 
- An object matching the API documentation. 
+An object matching the API documentation. 
+
+### `arrivalsBoard`
+
+A nicer arrivals board which might be easier to use
+
+Arguments: 
+
+- `$crs` the CRS code of the station to search 
+- `$to=null` CRS to filter destination by
+- `$rows=5` maximum rows returned
+
+Returns: 
+
+An object matching the API documentation. 
+
+### `departuresBoard`
+
+A nicer departures board which might be easier to use
+
+Arguments: 
+
+- `$crs` the CRS code of the station to search 
+- `$from=null` CRS to filter origin by
+- `$rows=5` maximum rows returned
+
+Returns: 
+
+An object matching the API documentation. 
+
+## Examples
+
+See `tests/tests.php` for some examples of how to use the SDK

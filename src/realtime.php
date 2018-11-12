@@ -25,7 +25,7 @@ class realtime{
 
     function __construct($username, $password){
         if(empty($username) || empty($password)){
-            throw new exception("Missing RTT credentials");
+            throw new \Exception("Missing RTT credentials");
         } else {
             $this->username = $username;
             $this->password = $password;
@@ -49,7 +49,7 @@ class realtime{
                 return; 
             }
         } else {
-            throw new exception("Missing Rail References");
+            throw new \Exception("Missing Rail References");
         }
     }
 
@@ -127,7 +127,7 @@ class realtime{
     */
 
     public function arrivalsBoard($crs, $from=null, $rows=5){
-        $data = this.locationList($crs, null, null, $from, null, $rows);
+        $data = $this->locationList($crs, "arrivals", null, $from, null, $rows);
 
         return $data;
     }
@@ -139,7 +139,7 @@ class realtime{
     */
 
     public function departuresBoard($crs, $to=null, $rows=5){
-        $data = this.locationList($crs, null, $to, null, null, $rows);
+        $data = $this->locationList($crs, "departures", $to, null, null, $rows);
 
         return $data;
     }
